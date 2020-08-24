@@ -1,0 +1,622 @@
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+        
+        body {
+            line-height: 1;
+        }
+        
+        ol,
+        ul {
+            list-style: none;
+        }
+        
+        blockquote,
+        q {
+            quotes: none;
+        }
+        
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        /*css 開始*/
+        
+        body {
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 940px;
+            margin: 0 auto;
+        }
+        /*--------------header(start)--------------*/
+        
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 30px 0px;
+        }
+        
+        .header h1 a {
+            display: block;
+            width: 220px;
+            height: 40px;
+            background-image: url(https://hexschool.github.io/webLayoutTraining1st/student-week1/logo-all-dark.svg);
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-indent: 101%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+        
+        .barIcon,
+        .carIcon {
+            display: none;
+        }
+        
+        .navbar li+li {
+            margin-left: 10px;
+        }
+        
+        .navbar a {
+            display: block;
+            text-decoration: none;
+            font-size: 16px;
+            color: #3F5D45;
+            font-weight: 700;
+            padding: 10px 20px;
+            margin-left: 10px;
+        }
+        
+        .navbar a:hover {
+            opacity: 0.7;
+            transition: 0.2s;
+        }
+        /*--------------header(end)--------------*/
+        /*--------------banner(start)--------------*/
+        
+        .banner {
+            margin-bottom: 60px;
+        }
+        /*--------------banner(end)--------------*/
+        /*--------------main(start)--------------*/
+        
+        .main {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+        
+        .menu {
+            width: 32%;
+            font-size: 24px;
+            line-height: 35px;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .menu h3 {
+            color: #EAF0ED;
+            padding: 16px 0;
+            background-color: #3f5d45;
+            border: 1px #eaf0ed solid;
+        }
+        
+        .menu_list a {
+            display: block;
+            padding: 16px 0;
+            color: #3f5d45;
+            text-decoration: none;
+            border-right: 1px #eaf0ed solid;
+            border-left: 1px #eaf0ed solid;
+            border-bottom: 1px #eaf0ed solid;
+        }
+        
+        .menu_list li:nth-child(1) a {
+            background-color: #EAF0ED;
+        }
+        
+        .menu_list :nth-child(n+2):hover {
+            background-color: #EAF0ED;
+            transition: 0.2s;
+        }
+        
+        .contain {
+            width: 66%;
+        }
+        
+        .product {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .product li {
+            position: relative;
+            width: 48%;
+            margin-bottom: 20px;
+            border: 1px #eaf0ed solid;
+        }
+        
+        .select {
+            position: absolute;
+            top: 0;
+            left: 20px;
+            background-color: #3F5D45;
+            font-size: 16px;
+            color: #EAF0ED;
+            writing-mode: vertical-lr;
+            padding: 10px;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        
+        .favorites {
+            position: absolute;
+            top: 20px;
+            right: 22px;
+        }
+        
+        .product_Abstract {
+            display: flex;
+            color: #3F5D45;
+        }
+        
+        .product_Abstract h3 {
+            width: 57%;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            padding: 14px 0px;
+            border: 1px solid #EAF0ED;
+        }
+        
+        .product_Abstract p {
+            width: 43%;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            padding: 14px 0px;
+            border: 1px solid #EAF0ED;
+        }
+        
+        .add_car {
+            width: 100%;
+            color: #3F5D45;
+            font-weight: 700;
+            background-color: #EAF0ED;
+            border: 0px solid #EAF0ED;
+            font-size: 24px;
+            text-align: center;
+            padding: 16px 0px;
+            font-family: Microsoft JhengHei;
+        }
+        
+        .add_car:hover {
+            background: #3F5D45;
+            color: #EAF0ED;
+        }
+        
+        .btn_page {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .page-list {
+            display: flex;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        
+        .btn_page a {
+            width: 60px;
+            height: 60px;
+            color: #3f5d45;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            border: 1px solid #eaf0ed;
+        }
+        
+        .page-list .page-active {
+            color: #EAF0ED;
+            background-color: #3f5d45;
+        }
+        
+        .page-list :nth-child(n + 3):hover,
+        .page-list :first-child :hover {
+            background-color: #EAF0ED;
+            transition: 0.2s;
+        }
+        /*--------------main(end)--------------*/
+        /*--------------subscribe(start)--------------*/
+        
+        .subscribe {
+            padding: 30px 0;
+            background-color: #3F5D45;
+            color: #EAF0ED;
+        }
+        
+        .wrap {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+        
+        .space-between {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .subscribe-title {
+            display: flex;
+            align-items: center;
+        }
+        
+        .subscribe-title h3 {
+            font-size: 24px;
+            font-weight: 400;
+            margin-left: 20px;
+            line-height: 30px;
+        }
+        
+        .subscribe-title img {
+            width: 40px;
+        }
+        
+        .subscribe-form {
+            display: flex;
+        }
+        
+        .subscribe-form input {
+            border: none;
+            max-width: 300px;
+            padding: 15px 20px 15px 55px;
+            box-sizing: border-box;
+            background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/mail-24px.png?raw=true) no-repeat #EAF0ED 20px 50%;
+        }
+        
+        .subscribe-form button {
+            background: #FFE180;
+            border: 2px #FFE180 none;
+            padding: 16px 20px;
+        }
+        
+        .subscribe-form input:focus,
+        .subscribe-form button:focus {
+            outline: none;
+        }
+        
+        .subscribe-form input:focus {
+            background-color: #FCFAFE;
+        }
+        
+        .subscribe-form button:hover img {
+            animation-name: run;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes run {
+            0% {
+                transform: translateX(0px);
+            }
+            100% {
+                transform: translateX(8px);
+            }
+        }
+        
+        .productImg {
+            width: 100%;
+            height: auto;
+        }
+        /*--------------subscribe(end)--------------*/
+        /*--------------footer(start)--------------*/
+        
+        .footer {
+            padding: 30px 0;
+            color: #3F5D45;
+            background-color: #EAF0ED;
+        }
+        
+        .main-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-weight: 500;
+        }
+        
+        .contact img {
+            width: 172px;
+        }
+        
+        .contact ul {
+            line-height: 24px;
+            letter-spacing: 1px;
+        }
+        
+        .title {
+            font-size: 22px;
+            font-weight: 700;
+            writing-mode: vertical-rl;
+            /*左對齊(ltr)腳本，內容從下到上垂直流動*/
+            letter-spacing: 5px;
+            line-height: 40px;
+        }
+        
+        .title p {
+            text-indent: 15px;
+            white-space: nowrap;
+        }
+        
+        .main-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .friendlink {
+            display: flex;
+        }
+        
+        .friendlink img {
+            width: 32px;
+        }
+        
+        .friendlink img:hover {
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            opacity: 0.5;
+        }
+        
+        .friendlink li+li {
+            margin-left: 8px;
+        }
+        
+        .main-bottom p {
+            font-weight: 500;
+        }
+        /*--------------footer(end)--------------*/
+        /*--------------RWD(start)--------------*/
+        
+        @media(max-width: 1024px) {
+            .container {
+                max-width: 900px;
+                padding: 0 40px;
+            }
+        }
+        /*iPad*/
+        
+        @media(max-width: 768px) {
+            .container {
+                max-width: 90%;
+            }
+            .header {
+                margin: 30px 0;
+                box-sizing: border-box;
+                /* 自動計算扣除 border 或 padding 所剩餘的空間 */
+            }
+            .navbar {
+                display: none;
+            }
+            .barIcon,
+            .carIcon {
+                display: block;
+            }
+            .header h1 a {
+                background-size: 75%;
+                background-position: center;
+                background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-sm-dark.svg);
+            }
+            .banner {
+                margin-bottom: 0px;
+            }
+            .main {
+                flex-direction: column;
+                margin-bottom: 30px;
+            }
+            .menu,
+            .contain {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            .menu_list {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .menu_list li {
+                width: 50%;
+            }
+            .product {
+                justify-content: space-evenly;
+            }
+            .btn_page {
+                justify-content: center;
+            }
+            .wrap {
+                margin: 0 5%;
+            }
+            .friendlink {
+                margin: 38px 0 24px;
+            }
+            .subscribe .wrap {
+                flex-direction: column;
+                align-items: center;
+            }
+            .subscribe-title {
+                margin-bottom: 30px;
+            }
+            .main-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .friendlink {
+                margin-top: 0px;
+                margin-bottom: 23px;
+            }
+        }
+        
+        @media(max-width: 414px) {
+            .container {
+                max-width: 90%;
+            }
+            .menu_list li {
+                width: 100%;
+            }
+            .product li {
+                width: 100%;
+            }
+        }
+        /*iPhone*/
+        
+        @media(max-width: 375px) {
+            .container {
+                max-width: 90%;
+            }
+            .header {
+                padding: 0 5%;
+            }
+            .main {
+                margin-bottom: 0px;
+            }
+            .product {
+                justify-content: space-evenly;
+            }
+            .title {
+                display: none;
+            }
+            .contact img {
+                margin-bottom: 39.5px;
+            }
+        }
+        /*--------------RWD(end)--------------*/

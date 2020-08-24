@@ -1,0 +1,265 @@
+@import "reset";
+@import "layout";
+body {
+    font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.main {
+    // border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    max-width: 780px;
+    margin: 60px auto 60px;
+}
+
+//< !-- 左側欄位 -->
+.invoice {
+    // border: 1px solid black;
+    width: 57%;
+    a {
+        width: 100%;
+        padding: 20px 0;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 5px;
+        text-decoration: none;
+        color: #3f5d45;
+        background-color: #FFE180;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+}
+
+.invoiceText {
+    background: #3F5D45;
+    padding: 30px 40px;
+    h2 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #EAF0ED;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    .icon {
+        font-size: 20px;
+        display: flex;
+        position: relative;
+        i+i {
+            margin-left: 60px;
+        }
+        i:first-child::after,
+        i:nth-child(2)::after {
+            background-color: #EAF0ED;
+            position: absolute;
+            content: "";
+            width: 60px;
+            height: 2px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+    #elecInv,
+    #sendInv,
+    .elecInv,
+    .sendInv {
+        display: none;
+    }
+    #elecInv:checked~.checkBox [for=elecInv],
+    #sendInv:checked~.checkBox [for=sendInv] {
+        background-color: #EAF0ED;
+        color: #3f5d45;
+    }
+    #elecInv:checked~.elecInv,
+    #sendInv:checked~.sendInv {
+        display: block;
+    }
+    .checkBox {
+        display: flex;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 30px 0;
+        label {
+            display: block;
+            padding: 18px 20px;
+            width: 50%;
+            text-align: center;
+            cursor: pointer;
+            color: #EAF0ED;
+            border: 1.5px solid #EAF0ED;
+        }
+        label:hover {
+            background-color: #DBDBDB;
+            color: #3f5d45;
+            transition-duration: 1s;
+        }
+    }
+    .sendInv {
+        position: relative;
+    }
+    .invText {
+        label {
+            display: inline-block;
+            font-size: 20px;
+            margin-bottom: 8px;
+            font-size: 20px;
+            color: #EAF0ED;
+            font-weight: 700;
+        }
+        input[type=email],
+        input[type=text],
+        select {
+            width: 100%;
+            font-size: 16px;
+            font-weight: lighter;
+            color: #3f5d45;
+            border: 0;
+            padding: 17px 20px;
+            box-sizing: border-box;
+            background: #EAF0ED;
+        }
+        input:focus {
+            background-color: #fff;
+        }
+        .e-mail {
+            margin-bottom: 16px;
+        }
+        .address {
+            position: absolute;
+            top: 0px;
+            right: 0;
+            label {
+                display: inline-block;
+                font-size: 15px;
+                font-weight: 300;
+                margin-bottom: 8px;
+            }
+            .addressbox {
+                margin-right: 6px;
+            }
+        }
+        .option {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            .option1 {
+                margin-left: 8px;
+            }
+        }
+    }
+}
+
+//< !-- 左側欄位 -->
+// < !-- 右側欄位 -->
+.packingList {
+    width: 40%;
+    color: #8DA291;
+    h3 {
+        padding: 16px 0;
+        font-size: 24px;
+        letter-spacing: 1px;
+        text-align: center;
+        background-color: #EAF0ED;
+    }
+    .packing {
+        margin-bottom: 20px;
+        ul {
+            border: 1px solid #EAF0ED;
+        }
+        ul li {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+        }
+        ul li:nth-child(2) {
+            margin-top: 8px;
+        }
+        ul li:last-child {
+            margin-top: 16px;
+            font-weight: 500;
+            font-size: 20px;
+        }
+    }
+    .packing,
+    .list {
+        ul {
+            padding: 16px 20px;
+        }
+    }
+    .list {
+        ul {
+            border: 1px solid #EAF0ED;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .pic {
+            width: 50%;
+            margin-right: 20px
+        }
+        .pic img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+        }
+        .comm {
+            width: 50%;
+            font-weight: 300;
+            span {
+                font-size: 20px;
+                font-weight: 500;
+                margin-top: 2px;
+            }
+        }
+    }
+}
+
+// < !-- 右側欄位 -->
+
+/*--------------RWD(start)--------------*/
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 900px;
+        padding: 0 40px;
+    }
+}
+
+
+/*iPad*/
+
+@media(max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+    .main {
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+    .invoice {
+        width: 100%;
+    }
+    .packingList {
+        display: none;
+    }
+}
+
+@media(max-width: 414px) {
+    .main {
+        margin-top: 0px;
+    }
+}
+
+
+/*--------------RWD(end)--------------*/
